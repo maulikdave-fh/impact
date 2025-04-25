@@ -11,10 +11,19 @@ It is intended to
     flowchart LR
         RP(Restoration Practitioner)
         BDI(Biodiversity Indexer)
+        Species(Species)
+        Observations(Observations)
+        CSISI(CSISIntegrator)
+        CSIS(CSIS)
+        Ecoregion(Ecoregion)
+        RS (Restoration Site)
+        RFS (Reference Site)
+        
         RP --> BDI
+        RP --> RS & RF --> Observations
         BDI --> Species & Observations
-        Species & Observations --> CSISIntegrator --> CSIS
-        Observations & CSISIntegrator --> Ecoregion            
+        Species & Observations --> CSISI --> CSIS
+        CSISI --> Ecoregion            
 ```
 
 
