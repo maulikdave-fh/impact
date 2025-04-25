@@ -20,7 +20,7 @@ It is intended to
         RFS (Reference Site)
         
         RP --> BDI
-        RP --> RS & RF --> Observations
+        RP --> RS & RFS --> Observations
         BDI --> Species & Observations
         Species & Observations --> CSISI --> CSIS
         CSISI --> Ecoregion            
