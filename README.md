@@ -7,7 +7,11 @@ It is intended to
 2. provide meaningful insights about restoration projects to policy-makers, funding partners and clients.
 
 ## Context Map
-
+```mermaid
+    flowchart LR
+        Species & Observations --> CSIS
+    
+```
 
 
 ## Scope
