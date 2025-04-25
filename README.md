@@ -1,4 +1,5 @@
-![Impact!](impact.png)
+<img src="impact.png" alt="impact" width="50%"/>
+
 Impact is open-source online platform to help Restoration Practitioners to make data-driven decisions. 
 
 It is intended to
