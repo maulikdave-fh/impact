@@ -9,8 +9,10 @@ It is intended to
 ## Context Map
 ```mermaid
     flowchart LR
-        Species & Observations --> CSIS
-    
+        Restoration Practitioner --> Biodiversity Indexer
+        Biodiversity Index --> Species & Observations
+        Species & Observations --> CSISIntegrator --> CSIS
+        Observations & CSISIntegrator --> Ecoregion            
 ```
 
 
