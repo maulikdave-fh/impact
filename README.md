@@ -19,8 +19,7 @@ It is intended to
         RS(Restoration Site)
         RFS(Reference Site)
         
-        RP --> BDI
-        RP --> RS & RFS --> Observations
+        RP --> RS & RFS --> BDI
         BDI --> Species & Observations
         Species & Observations --> CSISI --> CSIS
         CSISI --> Ecoregion            
