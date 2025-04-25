@@ -41,7 +41,7 @@ It is intended to
         RP ->> +Impact : sign_up(fullname, username, password, etc)
         Impact -->> -RP : Authentication Token + userId
         RP ->> +Impact : get_homepage(useId)
-        BDI -->> -RP: Homepage + Restoration Sites, Reference Sites
+        Impact -->> -RP: Homepage + Restoration Sites, Reference Sites
         RP ->> +Impact : Create / View Restoration site / Reference site
         Impact -->> -RP : confirmation
         RP ->> +Impact : get_biodiversity_index(userId, siteId)
