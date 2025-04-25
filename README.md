@@ -16,8 +16,8 @@ It is intended to
         CSISI(CSISIntegrator)
         CSIS(CSIS)
         Ecoregion(Ecoregion)
-        RS (Restoration Site)
-        RFS (Reference Site)
+        RS(Restoration Site)
+        RFS(Reference Site)
         
         RP --> BDI
         RP --> RS & RFS --> Observations
