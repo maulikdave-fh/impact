@@ -33,27 +33,27 @@ It is intended to
 ```mermaid
     sequenceDiagram
         participant RP as Restoration Practitioner
-        participant BDI as BDI Platform
+        participant Impact as Impact Platform
         participant CSIS
-        BDI ->> CSIS : fetchObservations(eco-region coordinates)
-        CSIS -->> +BDI : Observations
-        BDI -->> -BDI : Store Observations, Update species
-        RP ->> +BDI : sign_up(fullname, username, password, etc)
-        BDI -->> -RP : Authentication Token + userId
-        RP ->> +BDI : get_homepage(useId)
+        Impact ->> CSIS : fetchObservations(eco-region coordinates)
+        CSIS -->> +Impact : Observations
+        Impact -->> -Impact : Store Observations, Update species
+        RP ->> +Impact : sign_up(fullname, username, password, etc)
+        Impact -->> -RP : Authentication Token + userId
+        RP ->> +Impact : get_homepage(useId)
         BDI -->> -RP: Homepage + Restoration Sites, Reference Sites
-        RP ->> +BDI : Create / View Restoration site / Reference site
-        BDI -->> -RP : confirmation
-        RP ->> +BDI : get_biodiversity_index(userId, siteId)
-        BDI -->> BDI : Calculate Biodiversity Index
-        BDI -->> -RP : biodiversity index
-        RP ->> +BDI : get_habitat_indicator(userId, siteId)
-        BDI -->> BDI : Calculate habitat indicator
-        BDI -->> -RP : habitat indicator
-        RP ->> BDI : login(username, password)
-        BDI -->> RP : auth token, userId
-        RP ->> BDI : logout(userId)
-        BDI -->> RP : confirmation             
+        RP ->> +Impact : Create / View Restoration site / Reference site
+        Impact -->> -RP : confirmation
+        RP ->> +Impact : get_biodiversity_index(userId, siteId)
+        Impact -->> Impact : Calculate Biodiversity Index
+        Impact -->> -RP : biodiversity index
+        RP ->> +Impact : get_habitat_indicator(userId, siteId)
+        Impact -->> Impact : Calculate habitat indicator
+        Impact -->> -RP : habitat indicator
+        RP ->> Impact : login(username, password)
+        Impact -->> RP : auth token, userId
+        RP ->> Impact : logout(userId)
+        Impact -->> RP : confirmation             
 ```
 
 ### System APIs Listing
