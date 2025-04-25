@@ -69,6 +69,7 @@ It is intended to
 
 ## Roadmap
 - [ ] Habitat Indicator -> indicates how a given restoration site is evolving over-time in-terms of habitat niches
+- [ ] Stakeholder Access
 - [ ] Ability to manage observations. In current version, RPs have to manage their observations at the supported Crowdsourced Species Identification System (CSIS)
 - [ ] Native Mobile App Support
 - [ ] Discussion Forum
