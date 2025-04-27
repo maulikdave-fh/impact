@@ -1,3 +1,10 @@
+/**
+ * Sets up "earth" databse in MongoDB with ecoregions configured in ./ecoregions.jso
+ * 
+ * @author Maulik Dave
+ * 
+ */
+
 const fs = require('fs');
 
 const MONGODB_URL = 'mongodb://127.0.0.1:27017/earth';
@@ -11,13 +18,13 @@ const jsonData = JSON.parse(data);
 
 let count = 0;
 jsonData.forEach(ecoRegion => {
-    let ecoregionMapData = fs.readFileSync(ecoRegion["geoJSON"], "utf8");
-    const ecoregionMapJSONData = JSON.parse(ecoregionMapData)["features"][0]["geometry"];
-    ecoRegion["regionMap"] = ecoregionMapJSONData;
-    delete ecoRegion["geoJSON"];
-    count++;
+	let ecoregionMapData = fs.readFileSync(ecoRegion["geoJSON"], "utf8");
+	const ecoregionMapJSONData = JSON.parse(ecoregionMapData)["features"][0]["geometry"];
+	ecoRegion["regionMap"] = ecoregionMapJSONData;
+	delete ecoRegion["geoJSON"];
+	count++;
 });
 
 db.ecoregion.insertMany(jsonData);
-db.ecoregion.createIndex({regionMap : "2dsphere"});
+db.ecoregion.createIndex({ regionMap: "2dsphere" });
 console.log(`DONE: Inserted ${count} ecoregions!`);
