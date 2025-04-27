@@ -1,7 +1,9 @@
 ## Setup Instructions
 In setup.js, point ```MONGODB_URL``` to your MongoDB instance. Make sure that the MongoDB database name is set to "earth".
 
-**Important Note** The previously loaded ecoregions will be purged.
+**Important Notes** 
+1. The previously loaded ecoregions will be purged.
+2. ecoregion component won't work without this setup.
 
 ```bash
 	mongosh --file setup.js
