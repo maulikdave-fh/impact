@@ -1,6 +1,6 @@
 <img src="impact.png" alt="impact" width="15%"/>
 
-Impact is open-source online platform to help Restoration Practitioners to make data-driven decisions. 
+Impact is open-source online platform to help Restoration Practitioners make data-driven decisions. 
 
 It is intended to
 1. improve "Plan -> Restore -> Observer -> Analyze" cycle.
