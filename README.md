@@ -81,7 +81,7 @@ It is intended to
 9. get_habitat_indicator(userId, siteId) -> habitat indicator
 
 ## System Architecture
-![System Architecture!](System Architecture-IMPACT___System_Architecture__V0_1_.png)
+![System Architecture!](/System Architecture-IMPACT___System_Architecture__V0_1_.png)
 
 ### Notes
 1. Following components are expected to be part of the system, but not highlighted in the system architecture
