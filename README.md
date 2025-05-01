@@ -63,9 +63,6 @@ It is intended to
         RP ->> +Impact : get_biodiversity_index(userId, siteId)
         Impact -->> Impact : Calculate Biodiversity Index
         Impact -->> -RP : biodiversity index
-        RP ->> +Impact : get_habitat_indicator(userId, siteId)
-        Impact -->> Impact : Calculate habitat indicator
-        Impact -->> -RP : habitat indicator
         RP ->> Impact : login(username, password)
         Impact -->> RP : auth token, userId
         RP ->> Impact : logout(userId)
@@ -83,9 +80,16 @@ It is intended to
 8. get_biodiversity_index(userId, siteId) -> biodiversity index
 9. get_habitat_indicator(userId, siteId) -> habitat indicator
 
+## System Architecture
+![System Architecture!](System Architecture-IMPACT___System_Architecture__V0_1_.png)
+
+### Notes
+1. Following components are expected to be part of the system, but not highlighted in the system architecture
+- Distributed Logging & Monitoring
+
 ## Roadmap
 - [ ] Habitat Indicator -> indicates how a given restoration site is evolving over-time in-terms of habitat niches
 - [ ] Stakeholder Access
-- [ ] Ability to manage observations. In current version, RPs have to manage their observations at the supported Crowdsourced Species Identification System (CSIS)
+- [ ] Ability to manage observations. In current version, RPs have to manage their observations at the supported Crowdsourced Species Identification Systems (CSIS)
 - [ ] Native Mobile App Support
 - [ ] Discussion Forum
