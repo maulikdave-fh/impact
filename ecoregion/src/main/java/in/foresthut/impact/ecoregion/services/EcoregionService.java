@@ -9,6 +9,8 @@ import in.foresthut.impact.ecoregion.repos.EcoregionRepository;
 /**
  * @author maulik-dave
  */
+// TODO : [Performance + Cloud Cost] Caching of eco-regions
+// TODO : [Performance + Cloud Cost] Application layer geospatial operation - point in polygon
 @Service
 public class EcoregionService {
 
