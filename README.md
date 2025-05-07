@@ -86,6 +86,7 @@ It is intended to
 ### Notes
 1. Following components are expected to be part of the system, but not highlighted in the system architecture
 - Distributed Logging & Monitoring
+- Service Registry and Discovery
 
 ## Roadmap
 - [ ] Habitat Indicator -> indicates how a given restoration site is evolving over-time in-terms of habitat niches
