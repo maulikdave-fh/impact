@@ -13,16 +13,16 @@ It is intended to
         BDI(Biodiversity Indexer)
         Species(Species)
         Observations(Observations)
-        CSISI(CSISIntegrator)
-        CSIS(CSIS)
+        GBIFI(GBIFIntegrator)
+        GBIF(GBIF)
         Ecoregion(Ecoregion)
         RS(Restoration Site)
         RFS(Reference Site)
         
         RP --> RS & RFS --> BDI
         BDI --> Species & Observations
-        Species & Observations --> CSISI --> CSIS
-        CSISI --> Ecoregion            
+        Species & Observations --> GBIFI --> GBIF
+        GBIFI --> Ecoregion            
 ```
 
 
@@ -35,8 +35,8 @@ It is intended to
 
 ### Quality Requirements
 #### Scalability
-1. Millions of observations to be processed from Crowdsource Species Identification System (CSIS) in the first fetch
-2. Thousands of observations coming from CSIS(s) in subsequent fetches (depending on the fetch frequency & number of ecoregions supported)
+1. Millions of observations to be processed from Global Biodiversity Information Facility (GBIF) in the first fetch
+2. Thousands of observations coming from GBIF(s) in subsequent fetches (depending on the fetch frequency & number of ecoregions supported)
 3. Thousands of RPs - most RPs spending 1-2 hours/day
 
 #### Availability
@@ -50,9 +50,9 @@ It is intended to
     sequenceDiagram
         participant RP as Restoration Practitioner
         participant Impact as Impact Platform
-        participant CSIS
-        Impact ->> CSIS : fetchObservations(eco-region coordinates)
-        CSIS -->> +Impact : Observations
+        participant GBIF
+        Impact ->> GBIF : fetchObservations(eco-region coordinates)
+        GBIF -->> +Impact : Observations
         Impact -->> -Impact : Store Observations, Update species
         RP ->> +Impact : sign_up(fullname, username, password, etc)
         Impact -->> -RP : Authentication Token + userId
