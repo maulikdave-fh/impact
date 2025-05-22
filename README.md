@@ -43,7 +43,10 @@ It is intended to
 1. Aim for 99.9% up-time
 
 #### Performance
-1. < 2secs of web-page load-time at 95pt
+1. < 2secs of web-page load-time at 95th percentile
+
+### System Constraints
+1. Avoid using cloud vendor specific tools / technologies - no vendor lock-in
 
 ## System's APIs
 ```mermaid
@@ -91,6 +94,7 @@ It is intended to
 ## Roadmap
 - [ ] Habitat Indicator -> indicates how a given restoration site is evolving over-time in-terms of habitat niches
 - [ ] Stakeholder Access
-- [ ] Ability to manage observations. In current version, RPs have to manage their observations at the supported Crowdsourced Species Identification Systems (CSIS)
+- [ ] Ability to manage observations. In current version, RPs have to manage their observations at the supported Crowd-sourced Species Identification Systems (CSIS)
+- [ ] Contextual Ads - Native Plant Nurseries, Restoration services, Geo survey services, Permaculture design services, etc.
 - [ ] Native Mobile App Support
 - [ ] Discussion Forum
