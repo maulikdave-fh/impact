@@ -41,9 +41,11 @@ It is intended to
 
 #### Availability
 1. Aim for 99.9% up-time
+2. Availability and Partition Tolerance to be prioritized over consistency
 
 #### Performance
 1. < 2secs of web-page load-time at 95th percentile
+2. Less than 500ms response time 99p
 
 ### System Constraints
 1. Avoid using cloud vendor specific tools / technologies - no vendor lock-in
@@ -87,7 +89,10 @@ It is intended to
 ![System Architecture!](System_Architecture-IMPACT___System_Architecture__V0_1_.png)
 
 ### Notes
-1. Following components are expected to be part of the system, but not highlighted in the system architecture
+1. Observations and Species data sets should be sharded by bioregion.
+2. Every microservice and database to be replicated.
+3. The system to run in multiple data centers / regions - 1 data center per realm
+4. Following components are expected to be part of the system, but not highlighted in the system architecture
 - Distributed Logging & Monitoring
 - Service Registry and Discovery
 
