@@ -20,11 +20,11 @@ let count = 0;
 jsonData.forEach(ecoRegion => {
 	let ecoregionMapData = fs.readFileSync(ecoRegion["geoJSON"], "utf8");
 	const ecoregionMapJSONData = JSON.parse(ecoregionMapData)["features"][0]["geometry"];
-	ecoRegion["regionMap"] = ecoregionMapJSONData;
+	ecoRegion["regionMap"] = JSON.stringify(ecoregionMapJSONData);
 	delete ecoRegion["geoJSON"];
 	count++;
 });
 
 db.ecoregion.insertMany(jsonData);
-db.ecoregion.createIndex({ regionMap: "2dsphere" });
+//db.ecoregion.createIndex({ regionMap: "2dsphere" });
 console.log(`DONE: Inserted ${count} ecoregions!`);

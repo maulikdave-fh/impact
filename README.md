@@ -1,6 +1,6 @@
 <img src="impact.png" alt="impact" width="15%"/>
 
-Impact is open-source online platform to help Restoration Practitioners make data-driven decisions. 
+Impact is an open-source online platform to help Restoration Practitioners make data-driven decisions for their restoration projects. 
 
 It is intended to
 1. improve "Plan -> Restore -> Observer -> Analyze" cycle.
@@ -44,8 +44,8 @@ It is intended to
 2. Availability and Partition Tolerance to be prioritized over consistency
 
 #### Performance
-1. < 2secs of web-page load-time at 95th percentile
-2. Less than 500ms response time 99p
+1. all services except biodiversity indicator service - <500ms response time 99p
+2. biodiversity indicator service - <1sec response time 99p
 
 ### System Constraints
 1. Avoid using cloud vendor specific tools / technologies - no vendor lock-in
@@ -90,7 +90,7 @@ It is intended to
 
 ### Notes
 1. Observations and Species data sets should be sharded by bioregion.
-2. Every microservice and database to be replicated.
+2. Every microservice and database to be replicated. Services with auto-scaling capabilities. 
 3. The system to run in multiple data centers / regions - 1 data center per realm
 4. Following components are expected to be part of the system, but not highlighted in the system architecture
 - Distributed Logging & Monitoring

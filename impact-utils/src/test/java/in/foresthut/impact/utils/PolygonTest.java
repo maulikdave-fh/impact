@@ -52,8 +52,8 @@ public class PolygonTest {
 	@Test
 	void testSplit_whenPolygonSmallerThanMAXAREA_shouldReturnOriginalMultiPolygon() {
 
-		Coordinate[] shell = new Coordinate[] { new Coordinate(0.1, 0.1), new Coordinate(-0.1, 0.1),
-				new Coordinate(-0.1, 0), new Coordinate(0.1, 0), new Coordinate(0.1, 0.1) };
+		Coordinate[] shell = new Coordinate[] { new Coordinate(0.001, 0.001), new Coordinate(-0.001, 0.001),
+				new Coordinate(-0.001, 0), new Coordinate(0.001, 0), new Coordinate(0.001, 0.001) };
 		var polygon = new GeometryFactory().createPolygon(shell);
 		Geometry multiPolygon = new GeometryFactory()
 				.createMultiPolygon(new org.locationtech.jts.geom.Polygon[] { polygon });

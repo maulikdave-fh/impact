@@ -3,7 +3,6 @@ package in.foresthut.impact.ecoregion.entities;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.geo.GeoJsonMultiPolygon;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -23,7 +22,7 @@ public class Ecoregion {
 	private String bioregion;
 	private List<String> keyStoneSpecies;
 	@JsonIgnore
-	private GeoJsonMultiPolygon regionMap;
+	private String regionMap;
 	private double areaHectares;
 
 	public Ecoregion() {
@@ -78,11 +77,11 @@ public class Ecoregion {
 		this.keyStoneSpecies = keyStoneSpecies;
 	}
 
-	public GeoJsonMultiPolygon getRegionMap() {
+	public String getRegionMap() {
 		return regionMap;
 	}
 
-	public void setRegionMap(GeoJsonMultiPolygon regionMap) {
+	public void setRegionMap(String regionMap) {
 		this.regionMap = regionMap;
 	}
 

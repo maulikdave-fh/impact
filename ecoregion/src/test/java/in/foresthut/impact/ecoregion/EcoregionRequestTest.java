@@ -25,7 +25,7 @@ public class EcoregionRequestTest {
 	void ecoregionShouldReturn254Ecoregion() throws Exception {
 		assertEquals(254,
 				this.restTemplate
-						.getForObject("http://localhost:" + port + "/ecoregion/18.266449523603537/73.49784175801707",
+						.getForObject("http://localhost:" + port + "/ecoregions/18.266449523603537/73.49784175801707",
 								Ecoregion.class)
 						.getRegionId());
 	}
@@ -33,7 +33,7 @@ public class EcoregionRequestTest {
 	@Test
 	void ecoregionShouldReturn404() throws Exception {
 		assertEquals(HttpStatus.NOT_FOUND, this.restTemplate
-				.getForEntity("http://localhost:" + port + "/ecoregion/8/65", Ecoregion.class).getStatusCode());
+				.getForEntity("http://localhost:" + port + "/ecoregions/8/65", Ecoregion.class).getStatusCode());
 	}
 
 }
