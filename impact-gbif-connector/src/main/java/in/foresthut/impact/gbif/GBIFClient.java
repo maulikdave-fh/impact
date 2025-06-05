@@ -6,6 +6,7 @@ import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import in.foresthut.impact.Config;
@@ -24,34 +26,53 @@ public class GBIFClient {
 	private final static Config config = Config.getInstance();
 	private final static String GBIF_HOST = config.get("gbif.host");
 
+	private final static int LIMIT = 300;
+
 	private final HttpClient client;
 	private final ObjectMapper objectMapper;
 
 	public GBIFClient() {
-		client = HttpClient.newHttpClient();
+		client = HttpClient.newBuilder().version(HttpClient.Version.HTTP_1_1).build();
 		objectMapper = new ObjectMapper();
 	}
 
-	public Observations observations(Task task) throws IOException, InterruptedException, ExecutionException {
-		final String GBIF_URL = GBIF_HOST + "/occurrence/search?modified=" + URLEncoder.encode(task.date(), "UTF-8")
-				+ "&geometry=" + URLEncoder.encode(task.polygon(), "UTF-8");
+	public List<Observation> observations(Task task) throws IOException, InterruptedException, ExecutionException {
+		List<Observation> observations = new ArrayList<>();
+		boolean endOfRecords = false;
+		int offset = 0;
+		while (!endOfRecords) {
+			final String GBIF_URL = GBIF_HOST + "/occurrence/search?limit=" + LIMIT + "&offset=" + offset + "&modified="
+					+ URLEncoder.encode(task.dateFrom(), "UTF-8") + "," + URLEncoder.encode(task.dateTo(), "UTF-8")
+					+ "&geometry=" + URLEncoder.encode(task.polygon(), "UTF-8");
 
-		HttpRequest request = HttpRequest.newBuilder().uri(URI.create(GBIF_URL)).GET().build();
-		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-		Observations observations = objectMapper.readValue(response.body(), Observations.class);
-		logger.info("Found {} observations.", observations.count());
-
+			try {
+				HttpRequest request = HttpRequest.newBuilder().uri(URI.create(GBIF_URL))
+						.header("User-Agent", "sayhello@foresthut.in").GET().build();
+				HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+				GBIFResponse gbifResponse = objectMapper.readValue(response.body(), GBIFResponse.class);
+				observations.addAll(gbifResponse.results());
+				endOfRecords = gbifResponse.endOfRecords();
+				offset += LIMIT;
+				logger.info("Received {} observations for page number {}", gbifResponse.results().size(),
+						offset / LIMIT);
+			} catch (Exception e) {
+				logger.error("Error while getting response for URL {}", GBIF_URL, e);
+				throw e;
+			}
+		}
+		logger.info("Received {} observations for task {}", observations.size(), task);
 		return observations;
 	}
 
 	@JsonIgnoreProperties(ignoreUnknown = true)
-	private static record Observations(int offset, int limit, boolean endOfRecords, int count,
+	private static record GBIFResponse(int offset, int limit, boolean endOfRecords, int count,
 			List<Observation> results) {
 	}
 
 	@JsonIgnoreProperties(ignoreUnknown = true)
-	private static record Observation(String iucnRedListCategory, String species) {
+	public static record Observation(long key, String species, String kingdom, String phylum, String order,
+			@JsonProperty(value = "class") String _class, String iucnRedListCategory, double decimalLatitude,
+			double decimalLongitude, String eventDate, String modified, String datasetName) {
 	}
 
 }

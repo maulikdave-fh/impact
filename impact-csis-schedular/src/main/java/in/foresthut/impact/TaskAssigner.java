@@ -26,8 +26,6 @@ import in.foresthut.impact.infra.CSISTasksDBConfiguration;
 public class TaskAssigner implements Runnable {
 	private static final Logger logger = LoggerFactory.getLogger(TaskAssigner.class);
 	private static MongoDatabase csisTaskDatabase = CSISTasksDBConfiguration.getInstance();
-	private final static Config config = Config.getInstance();
-	private final static String QUEUE_NAME = config.get("rabbitmq.queue.name");
 	private MongoCollection<Document> taskCollection;
 	private EcoregionClient ecoregionClient;
 
@@ -79,38 +77,5 @@ public class TaskAssigner implements Runnable {
 				logger.info("Tasks updated for ecoregionId {} - {}", ecoregionId, updateResult);
 			}
 		}
-
-//		ConnectionFactory factory = new ConnectionFactory();
-//		factory.setHost(config.get("rabbitmq.host"));
-//		try (Connection connection = factory.newConnection(); Channel channel = connection.createChannel()) {
-//			channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-//			for (var ecoregion : ecoregions.entrySet()) {
-//				for (var polygon : ecoregion.getValue()) {
-//					var task = new Task(ecoregion.getKey(), lastFetchedFor.plusMonths(1).toString(), polygon);
-//					var message = new ObjectMapper().writeValueAsBytes(task);
-//					channel.basicPublish("", QUEUE_NAME, null, message);
-//					logger.info(" [x] Sent '{}'", task);
-//					// TODO: Remove the break
-//					break;
-//				}
-//				// TODO: Remove the break
-//				break;
-//			}
-//		} catch (IOException e) {
-//			logger.error("{}", e);
-//		} catch (TimeoutException e1) {
-//			logger.error("{}", e1);
-//		}
-//
-//		Bson filter = Filters.eq("_id", gbifConfig.getObjectId("_id"));
-//		Bson update = null;
-//		if (isMonthlyFetch) {
-//			update = Updates.set("lastFetchedFor", lastFetchedFor.plusMonths(1).toString());
-//			taskCollection.updateOne(filter, update);
-//		} else {
-//			taskCollection.updateMany(filter, Updates.combine(
-//					Updates.set("lastFetchedFor", today.minusDays(1).toString()), Updates.set("frequencyMins", 1440)));
-//		}
 	}
-
 }
