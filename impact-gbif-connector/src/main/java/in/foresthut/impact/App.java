@@ -44,7 +44,7 @@ public class App {
 		factory.setHost(config.get("rabbitmq.csis-tasks.host"));
 		Connection connection = factory.newConnection();
 
-		// Creating 4 consumers
+		// Creating multiple consumers
 		for (int i = 0; i < NUMBER_OF_CONSUMERS; i++) {
 			createConsumers(connection, i + 1, gbifClient);
 		}
