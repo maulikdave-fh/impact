@@ -14,8 +14,6 @@ import org.locationtech.jts.io.ParseException;
 import org.locationtech.jts.io.geojson.GeoJsonReader;
 import org.locationtech.jts.operation.polygonize.Polygonizer;
 
-import in.foresthut.impact.utils.exceptions.InvalidGeoJsonException;
-
 /**
  * An utility class for Polygon.
  *
@@ -33,7 +31,7 @@ public class Polygon {
 	 * @param geoJsonPolygon
 	 * @throws InvalidGeoJsonException if invalid geoJSON string
 	 */
-	public Polygon(String geoJsonPolygon) throws InvalidGeoJsonException {
+	public Polygon(String geoJsonPolygon) {
 		try {
 			this.poly = new GeoJsonReader().read(geoJsonPolygon);
 		} catch (ParseException ex) {
@@ -121,6 +119,11 @@ public class Polygon {
 		return polyArray;
 	}
 
+	/**
+	 * Returns pre-configured optimal max area of individual splits
+	 * 
+	 * @return pre-configured max area
+	 */
 	public static double getMaxArea() {
 		return MAX_AREA;
 	}
