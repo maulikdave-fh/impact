@@ -96,7 +96,23 @@ public class EcoregionService {
 		public void handle(HttpExchange exchange) throws IOException {
 			if (exchange.getRequestMethod().equals("GET")) {
 				String[] path = exchange.getRequestURI().getPath().split("/");
+				if (path.length != 4) {
+					final String traceId = UUID.randomUUID().toString();
+					logger.error("[Error-trace-id] {} Invalid Request '{}'", traceId,
+							exchange.getRequestURI().getPath());
+					sendResponse("Invalid Request. Check for typos.", exchange, 404, traceId);
+					return;
+				}
 				String id = path[2];
+
+				String action = path[3];
+				if (!action.equals("split")) {
+					final String traceId = UUID.randomUUID().toString();
+					logger.error("[Error-trace-id] {} Invalid Action in Request '/{}'. Check for typo.", traceId,
+							action);
+					sendResponse("Invalid Request. Check for typos.", exchange, 404, traceId);
+					return;
+				}
 
 				List<String> splits = new ArrayList<>();
 				try {

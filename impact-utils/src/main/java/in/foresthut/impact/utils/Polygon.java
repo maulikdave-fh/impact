@@ -40,7 +40,7 @@ public class Polygon {
 			this.poly = new GeoJsonReader().read(geoJsonPolygon);
 		} catch (ParseException ex) {
 			final String traceId = UUID.randomUUID().toString();
-			logger.error("{} Invalid geoJSON {}", traceId, geoJsonPolygon, ex);
+			logger.error("[Error-trace-id] {} Invalid geoJSON {}", traceId, geoJsonPolygon, ex);
 			throw new InvalidGeoJsonException("Invalid geoJSON: ", traceId, ex);
 		}
 	}
