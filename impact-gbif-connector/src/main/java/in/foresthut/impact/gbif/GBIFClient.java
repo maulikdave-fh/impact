@@ -14,8 +14,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import javax.management.RuntimeErrorException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,7 +103,7 @@ public class GBIFClient {
 	@JsonIgnoreProperties(ignoreUnknown = true)
 	public static record Observation(long key, String species, String kingdom, String phylum, String order,
 			@JsonProperty(value = "class") String _class, String iucnRedListCategory, double decimalLatitude,
-			double decimalLongitude, String eventDate, String modified, String datasetName) {
+			double decimalLongitude, String eventDate, String modified, String datasetName, String recordedBy) {
 	}
 
 	static class FetchGBIFObservationsTask implements Callable<List<Observation>> {
