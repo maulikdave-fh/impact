@@ -7,7 +7,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
-import in.foresthut.impact.Config;
+import in.foresthut.impact.config.Config;
 
 
 public class CSISProcessedMessagesDBConfiguration {

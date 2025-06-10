@@ -1,4 +1,4 @@
-package in.foresthut.impact.repo;
+package in.foresthut.impact.ecoregion.repo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +11,10 @@ import org.slf4j.LoggerFactory;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Projections;
 
-import in.foresthut.impact.infra.EarthDatabase;
+import in.foresthut.impact.ecoregion.infra.EarthDatabase;
 
 public class Ecoregions {
-	private static MongoDatabase earthDatabase = EarthDatabase.getInstance();
+	private static MongoDatabase earthDatabase;
 	private static final Logger logger = LoggerFactory.getLogger(Ecoregions.class);
 
 	private Ecoregions() {
@@ -22,6 +22,7 @@ public class Ecoregions {
 	}
 
 	public static List<Ecoregion> get() {
+		earthDatabase = EarthDatabase.getInstance();
 		List<Ecoregion> ecoregions = new ArrayList<>();
 		var ecoregionCollection = earthDatabase.getCollection("ecoregion");
 		Bson includeProjection = Projections.include("id", "regionId", "name", "realm", "biome", "bioregion",
@@ -29,7 +30,7 @@ public class Ecoregions {
 		for (Document ecoregion : ecoregionCollection.find().projection(includeProjection)) {
 			ecoregions.add(Ecoregion.from(ecoregion));
 		}
-		logger.info("Found {} ecoregions.", ecoregions.size());
+		logger.info("Found {} ecoregion(s).", ecoregions.size());
 		return ecoregions;
 	}
 }

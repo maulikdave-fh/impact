@@ -21,6 +21,7 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
+import in.foresthut.impact.config.Config;
 import in.foresthut.impact.infra.CSISTasksDBConfiguration;
 
 public class TaskPublisher implements Runnable {

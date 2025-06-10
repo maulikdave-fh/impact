@@ -21,6 +21,7 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 
+import in.foresthut.impact.config.Config;
 import in.foresthut.impact.gbif.GBIFClient;
 import in.foresthut.impact.gbif.GBIFClient.Observation;
 import in.foresthut.impact.infra.CSISProcessedMessagesDBConfiguration;

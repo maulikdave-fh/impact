@@ -1,4 +1,4 @@
-package in.foresthut.impact.infra;
+package in.foresthut.impact.ecoregion.infra;
 
 import java.util.HashMap;
 import java.util.List;

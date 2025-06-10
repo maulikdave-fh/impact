@@ -3,6 +3,7 @@ package in.foresthut.impact.utils;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.locationtech.jts.geom.Coordinate;
@@ -13,6 +14,8 @@ import org.locationtech.jts.geom.util.LineStringExtracter;
 import org.locationtech.jts.io.ParseException;
 import org.locationtech.jts.io.geojson.GeoJsonReader;
 import org.locationtech.jts.operation.polygonize.Polygonizer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * An utility class for Polygon.
@@ -22,6 +25,7 @@ import org.locationtech.jts.operation.polygonize.Polygonizer;
 
 public class Polygon {
 	private static final double MAX_AREA = 0.05d;
+	private final static Logger logger = LoggerFactory.getLogger(Polygon.class);
 
 	private Geometry poly;
 
@@ -35,7 +39,9 @@ public class Polygon {
 		try {
 			this.poly = new GeoJsonReader().read(geoJsonPolygon);
 		} catch (ParseException ex) {
-			throw new InvalidGeoJsonException("Invalid geoJSON: ", ex);
+			final String traceId = UUID.randomUUID().toString();
+			logger.error("{} Invalid geoJSON {}", traceId, geoJsonPolygon, ex);
+			throw new InvalidGeoJsonException("Invalid geoJSON: ", traceId, ex);
 		}
 	}
 

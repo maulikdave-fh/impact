@@ -3,6 +3,7 @@ package in.foresthut.impact.config;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,14 +25,17 @@ public class Config {
 
 		try (InputStream input = getClass().getClassLoader().getResourceAsStream(CONFIG_FILE)) {
 			if (input == null) {
-				logger.error("Config file {}  not found.", CONFIG_FILE);
-				throw new ConfigFileNotFoundException(String.format("Config file %s not found", CONFIG_FILE));
+				final String traceId = UUID.randomUUID().toString();
+				logger.error("{} Config file {}  not found.", traceId, CONFIG_FILE);
+				throw new ConfigFileNotFoundException(String.format("Config file %s not found", CONFIG_FILE), traceId,
+						null);
 			}
 			properties.load(input);
 			logger.info("Configurations loaded successfully.");
 		} catch (IOException ex) {
-			logger.error("Could not load properties from {}", CONFIG_FILE, ex);
-			throw new ConfigLoadException(String.format("Could not load properties from %s", CONFIG_FILE), ex);
+			final String traceId = UUID.randomUUID().toString();
+			logger.error("{} Could not load properties from {}", traceId, CONFIG_FILE, ex);
+			throw new ConfigLoadException(String.format("Could not load properties from %s", CONFIG_FILE), traceId, ex);
 		}
 	}
 

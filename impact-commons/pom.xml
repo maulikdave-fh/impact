@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>in.foresthut</groupId>
-	<artifactId>impact-utils</artifactId>
+	<artifactId>impact-commons</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<name>impact-commons</name>
+	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -13,39 +17,9 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<org.slf4j.version>2.0.17</org.slf4j.version>
 		<logback.version>1.5.18</logback.version>
-
 	</properties>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.junit</groupId>
-				<artifactId>junit-bom</artifactId>
-				<version>5.12.1</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+
 	<dependencies>
-		<dependency>
-			<groupId>in.foresthut</groupId>
-			<artifactId>impact-commons</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.locationtech.jts/jts-core -->
-		<dependency>
-			<groupId>org.locationtech.jts</groupId>
-			<artifactId>jts-core</artifactId>
-			<version>1.20.0</version>
-		</dependency>
-
-		<!--https://mvnrepository.com/artifact/org.locationtech.jts.io/jts-io-common -->
-		<dependency>
-			<groupId>org.locationtech.jts.io</groupId>
-			<artifactId>jts-io-common</artifactId>
-			<version>1.20.0</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -58,14 +32,8 @@
 			<version>${logback.version}</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
+
 	<build>
 		<pluginManagement>
 			<!--  lock down plugins versions to avoid using Maven

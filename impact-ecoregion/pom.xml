@@ -29,14 +29,21 @@
 			<artifactId>impact-utils</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>in.foresthut</groupId>
+			<artifactId>impact-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>in.foresthut</groupId>
 			<artifactId>impact-config</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-	
+
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongodb-driver-sync</artifactId>
@@ -90,7 +97,7 @@
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
-					
+
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>

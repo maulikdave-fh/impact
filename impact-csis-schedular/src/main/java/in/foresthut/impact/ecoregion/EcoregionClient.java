@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import in.foresthut.impact.Config;
+import in.foresthut.impact.config.Config;
 
 /**
  * Responsible to communicate with impact-ecoregion service.
