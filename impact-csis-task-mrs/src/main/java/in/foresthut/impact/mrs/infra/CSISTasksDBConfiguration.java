@@ -1,4 +1,4 @@
-package in.foresthut.impact.infra;
+package in.foresthut.impact.mrs.infra;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

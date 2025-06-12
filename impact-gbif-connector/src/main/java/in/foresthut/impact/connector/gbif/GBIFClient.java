@@ -1,4 +1,4 @@
-package in.foresthut.impact.gbif;
+package in.foresthut.impact.connector.gbif;
 
 import java.io.IOException;
 import java.net.URI;
@@ -21,8 +21,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import in.foresthut.impact.Task;
 import in.foresthut.impact.config.Config;
+import in.foresthut.impact.gbif.connector.Task;
 
 public class GBIFClient {
 	private static final Logger logger = LoggerFactory.getLogger(GBIFClient.class);
@@ -101,9 +101,10 @@ public class GBIFClient {
 	}
 
 	@JsonIgnoreProperties(ignoreUnknown = true)
-	public static record Observation(long key, String species, String kingdom, String phylum, String order,
-			@JsonProperty(value = "class") String _class, String iucnRedListCategory, double decimalLatitude,
-			double decimalLongitude, String eventDate, String modified, String datasetName, String recordedBy) {
+	public static record Observation(long key, String species, String kingdom, String phylum,
+			@JsonProperty(value = "class") String _class, String order, String family, String iucnRedListCategory,
+			double decimalLatitude, double decimalLongitude, String eventDate, String modified, String datasetName,
+			String recordedBy) {
 	}
 
 	static class FetchGBIFObservationsTask implements Callable<List<Observation>> {

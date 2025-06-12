@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>in.foresthut</groupId>
-	<artifactId>impact-gbif-connector</artifactId>
+	<artifactId>impact-species</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>impact-gbif-connector</name>
+	<name>impact-species</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -21,6 +21,7 @@
 		<logback.version>1.5.18</logback.version>
 		<com.fasterxml.jackson.version>2.18.3</com.fasterxml.jackson.version>
 		<rabbitmq.version>5.25.0</rabbitmq.version>
+		<com.google.genai.version>1.0.0</com.google.genai.version>
 	</properties>
 
 
@@ -28,6 +29,12 @@
 		<dependency>
 			<groupId>in.foresthut</groupId>
 			<artifactId>impact-config</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>in.foresthut</groupId>
+			<artifactId>impact-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
@@ -70,6 +77,13 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.google.genai</groupId>
+			<artifactId>google-genai</artifactId>
+			<version>${com.google.genai.version}</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<version>5.12.1</version>
@@ -91,7 +105,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>in.foresthut.impact.gbif.connector.App</mainClass>
+							<mainClass>in.foresthut.impact.species.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

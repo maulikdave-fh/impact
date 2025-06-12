@@ -1,4 +1,4 @@
-package in.foresthut.impact.ecoregion.infra;
+package in.foresthut.impact.species.infa;
 
 import java.util.UUID;
 
@@ -21,13 +21,15 @@ import com.mongodb.client.MongoDatabase;
 import in.foresthut.impact.commons.AlreadyLoggedException;
 import in.foresthut.impact.config.Config;
 
-public class EarthDatabase {
-	private static EarthDatabase instance;
-	private MongoDatabase earthDatabase;
-	private static final Logger logger = LoggerFactory.getLogger(EarthDatabase.class);
+
+public class SpeciesDBConfiguration {
+	private static SpeciesDBConfiguration instance;
+	private MongoClient mongoClient;
+	private MongoDatabase speciesDatabase;
+	private static final Logger logger = LoggerFactory.getLogger(SpeciesDBConfiguration.class);
 	private static Config config = Config.getInstance();
 
-	private EarthDatabase() {
+	private SpeciesDBConfiguration() {
 		String connectionString = config.get("mongodb.uri");
 		logger.info("Trying to connect to mongo db at {}", connectionString);
 
@@ -38,12 +40,12 @@ public class EarthDatabase {
 				.applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
 
 		// Create a new client and connect to the server
-		MongoClient mongoClient = MongoClients.create(settings);
-		earthDatabase = mongoClient.getDatabase(config.get("mongodb.database"));
+		mongoClient = MongoClients.create(settings);
+		speciesDatabase = mongoClient.getDatabase(config.get("mongodb.database"));
 		try {
 			// Send a ping to confirm a successful connection
 			Bson command = new BsonDocument("ping", new BsonInt64(1));
-			Document commandResult = earthDatabase.runCommand(command);
+			Document commandResult = speciesDatabase.runCommand(command);
 			logger.info("Connected successfully to mongo db at {} with ping results {}", connectionString,
 					commandResult);
 		} catch (MongoException me) {
@@ -54,9 +56,17 @@ public class EarthDatabase {
 		}
 	}
 
-	public static synchronized MongoDatabase getInstance() {
+	public static synchronized SpeciesDBConfiguration getInstance() {
 		if (instance == null)
-			instance = new EarthDatabase();
-		return instance.earthDatabase;
+			instance = new SpeciesDBConfiguration();
+		return instance;
+	}	
+	
+	public MongoClient mongoClient() {
+		return mongoClient;
+	}
+	
+	public MongoDatabase database() {
+		return speciesDatabase;
 	}
 }

@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>in.foresthut</groupId>
-	<artifactId>impact-gbif-connector</artifactId>
+	<artifactId>impact-observation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>impact-gbif-connector</name>
+	<name>impact-observation</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -28,6 +28,12 @@
 		<dependency>
 			<groupId>in.foresthut</groupId>
 			<artifactId>impact-config</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>in.foresthut</groupId>
+			<artifactId>impact-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
@@ -91,7 +97,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>in.foresthut.impact.gbif.connector.App</mainClass>
+							<mainClass>in.foresthut.impact.observation.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

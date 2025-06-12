@@ -1,4 +1,4 @@
-package in.foresthut.impact;
+package in.foresthut.impact.mrs;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -22,7 +22,7 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 import in.foresthut.impact.config.Config;
-import in.foresthut.impact.infra.CSISTasksDBConfiguration;
+import in.foresthut.impact.mrs.infra.CSISTasksDBConfiguration;
 
 public class TaskPublisher implements Runnable {
 	private static final Logger logger = LoggerFactory.getLogger(TaskPublisher.class);

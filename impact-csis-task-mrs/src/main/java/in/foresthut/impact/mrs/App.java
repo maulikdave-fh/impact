@@ -1,4 +1,4 @@
-package in.foresthut.impact;
+package in.foresthut.impact.mrs;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

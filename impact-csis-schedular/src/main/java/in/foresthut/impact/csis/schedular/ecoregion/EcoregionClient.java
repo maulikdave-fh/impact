@@ -1,4 +1,4 @@
-package in.foresthut.impact.ecoregion;
+package in.foresthut.impact.csis.schedular.ecoregion;
 
 import java.io.IOException;
 import java.net.URI;

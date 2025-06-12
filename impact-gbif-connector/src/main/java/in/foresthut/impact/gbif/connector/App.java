@@ -1,4 +1,4 @@
-package in.foresthut.impact;
+package in.foresthut.impact.gbif.connector;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.rabbitmq.client.AMQP;
+import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -22,9 +23,9 @@ import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 
 import in.foresthut.impact.config.Config;
-import in.foresthut.impact.gbif.GBIFClient;
-import in.foresthut.impact.gbif.GBIFClient.Observation;
-import in.foresthut.impact.infra.CSISProcessedMessagesDBConfiguration;
+import in.foresthut.impact.connector.gbif.GBIFClient;
+import in.foresthut.impact.connector.gbif.GBIFClient.Observation;
+import in.foresthut.impact.gbif.connector.infra.CSISProcessedMessagesDBConfiguration;
 
 public class App {
 	private static final Logger logger = LoggerFactory.getLogger(App.class);
@@ -32,7 +33,7 @@ public class App {
 	private static MongoCollection<Document> processedMessageCollection;
 	private final static Config config = Config.getInstance();
 	private final static String TASK_QUEUE_NAME = config.get("rabbitmq.csis-tasks.queue.name");
-	private final static String OBSERVATIONS_QUEUE_NAME = config.get("rabbitmq.observations.queue.name");
+	private final static String EXCHNAGE_NAME = config.get("rabbitmq.exchange.name");
 	private final static int NUMBER_OF_CONSUMERS = 4;
 
 	public static void main(String[] args)
@@ -84,9 +85,11 @@ public class App {
 								// 1. Put observations in Observations QUEUE
 								for (var observation : observations) {
 									try {
-										//Add ecoregionId to message and publish
-										ObservationMessage observationMessage = new ObservationMessage(message.ecoregionId(), observation);
-										publishObservation(observationMessage);
+										// Add ecoregionId to message and publish
+										ObservationMessage observationMessage = new ObservationMessage(
+												message.ecoregionId(), observation);
+										if (observationMessage.observation().species() != null)
+											publishObservation(observationMessage);
 									} catch (IOException | TimeoutException e) {
 										logger.error("Error while publishing {} to observations queue", observation, e);
 										throw new IOException(e);
@@ -107,14 +110,15 @@ public class App {
 						}
 					}
 
-					private void publishObservation(ObservationMessage observation) throws IOException, TimeoutException {
+					private void publishObservation(ObservationMessage observation)
+							throws IOException, TimeoutException {
 						ConnectionFactory factory = new ConnectionFactory();
 						factory.setHost(config.get("rabbitmq.observations.host"));
 						try (Connection connection = factory.newConnection();
 								Channel channel = connection.createChannel()) {
-							channel.queueDeclare(OBSERVATIONS_QUEUE_NAME, false, false, false, null);
+							channel.exchangeDeclare(EXCHNAGE_NAME, BuiltinExchangeType.FANOUT);
 							var message = new ObjectMapper().writeValueAsBytes(observation);
-							channel.basicPublish("", OBSERVATIONS_QUEUE_NAME, null, message);
+							channel.basicPublish(EXCHNAGE_NAME, "", null, message);
 							// logger.info(" [x] Sent for GBIF observation id '{}'", observation.key());
 						} catch (IOException e) {
 							logger.error("{}", e);
@@ -128,9 +132,7 @@ public class App {
 
 		logger.info("Consumer " + consumerId + " is waiting for messages.");
 	}
-	
+
 	static record ObservationMessage(String ecoregionId, Observation observation) {
 	}
 }
-
-

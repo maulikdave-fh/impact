@@ -1,4 +1,4 @@
-package in.foresthut.impact;
+package in.foresthut.impact.csis.schedular;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -20,8 +20,8 @@ import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.model.Updates;
 import com.mongodb.client.result.UpdateResult;
 
-import in.foresthut.impact.ecoregion.EcoregionClient;
-import in.foresthut.impact.infra.CSISTasksDBConfiguration;
+import in.foresthut.impact.csis.schedular.ecoregion.EcoregionClient;
+import in.foresthut.impact.csis.schedular.infra.CSISTasksDBConfiguration;
 
 public class TaskAssigner implements Runnable {
 	private static final Logger logger = LoggerFactory.getLogger(TaskAssigner.class);

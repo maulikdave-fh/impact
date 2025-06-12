@@ -91,7 +91,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>in.foresthut.impact.App</mainClass>
+							<mainClass>in.foresthut.impact.mrs.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
