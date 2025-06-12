@@ -2,27 +2,82 @@
 	{
 		"regionId": 242,
 		"name": "Malabar Coast Moist Forests",
+		"primaryHabitat": {
+			"id": 1.6,
+			"name": "Subtropical/Tropical Moist Lowland Forest"
+		},
 		"realm": "Indomalayan",
 		"biome": "Tropical & Subtropical Moist Broadleaf Forests",
 		"bioregion": "Indian Tropical Coastal Forests (IM2)",
 		"countries": [
 			"India"
 		],
-		"areaHectares": 3554000,
-		"keyStoneSpecies": [],
+		"areaHectares": 602000,
+		"keySpecies": [
+			"Panthera tigris",
+			"Bos gaurus",
+			"Melursus ursinus",
+			"Elephas maximus",
+			"Anthracoceros coronatus",
+			"Semnopithecus johnii",
+			"Loris lydekkerianus",
+			"Ocyceros griseus",
+			"Indotestudo travancorica",
+			"Paradoxurus jerdoni",
+			"Viverra civettina",
+			"Sypheotides indicus"
+		],
 		"geoJSON": "./geojsons/im2/242.geojson"
 	},
 	{
 		"regionId": 253,
 		"name": "North Western Ghats Moist Deciduous Forests",
+		"primaryHabitat": {
+			"id": 1.6,
+			"name": "Subtropical/Tropical Moist Lowland Forest"
+		},
 		"realm": "Indomalayan",
 		"biome": "Tropical & Subtropical Moist Broadleaf Forests",
 		"bioregion": "Indian Tropical Coastal Forests (IM2)",
 		"countries": [
 			"India"
 		],
-		"areaHectares": 4831000,
-		"keyStoneSpecies": [],
+		"areaHectares": 4816800,
+		"keySpecies": [
+			"Panthera tigris",
+			"Bos gaurus",
+			"Melursus ursinus",
+			"Elephas maximus",
+			"Panthera pardus",
+			"Canis aureus",
+			"Buceros bicornis",
+			"Treron affinis",
+			"Ratufa indica",
+			"Myophonus horsfieldii",
+			"Uropeltis phipsonii",
+			"Harpactes fasciatus",
+			"Columba elphinstonii",
+			"Psittacula columboides",
+			"Lophotriorchis kienerii",
+			"Ictinaetus malaiensis",
+			"Gyps bengalensis",
+			"Nisaetus cirrhatus",
+			"Ahaetulla oxyrhynca",
+			"Graphium teredon",
+			"Papilio buddha",
+			"Ketupa nipalensis",
+			"Ophiophagus hannah",
+			"Craspedocephalus malabaricus",
+			"Ahaetulla borealis",
+			"Anthracoceros coronatus",
+			"Semnopithecus johnii",
+			"Loris lydekkerianus",
+			"Ocyceros griseus",
+			"Indotestudo travancorica",
+			"Paradoxurus jerdoni",
+			"Viverra civettina",
+			"Sypheotides indicus"
+		],
 		"geoJSON": "./geojsons/im2/253.geojson"
 	},
 	{
@@ -35,7 +90,7 @@
 			"India"
 		],
 		"areaHectares": 3100000,
-		"keyStoneSpecies": [],
+		"keySpecies": [],
 		"geoJSON": "./geojsons/im2/254.geojson"
 	},
 	{
@@ -48,7 +103,7 @@
 			"India"
 		],
 		"areaHectares": 2382000,
-		"keyStoneSpecies": [],
+		"keySpecies": [],
 		"geoJSON": "./geojsons/im2/270.geojson"
 	},
 	{
@@ -61,7 +116,7 @@
 			"India"
 		],
 		"areaHectares": 2269000,
-		"keyStoneSpecies": [],
+		"keySpecies": [],
 		"geoJSON": "./geojsons/im2/271.geojson"
 	}
 ]
