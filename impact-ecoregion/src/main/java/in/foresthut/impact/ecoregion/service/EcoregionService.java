@@ -18,7 +18,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-import in.foresthut.impact.commons.AlreadyLoggedException;
+import in.foresthut.impact.commons.exceptions.AlreadyLoggedException;
 import in.foresthut.impact.ecoregion.exceptions.InvalidEcoregionIdException;
 import in.foresthut.impact.ecoregion.repo.Ecoregion;
 import in.foresthut.impact.ecoregion.repo.Ecoregions;

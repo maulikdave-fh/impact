@@ -18,7 +18,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
-import in.foresthut.impact.commons.AlreadyLoggedException;
+import in.foresthut.impact.commons.exceptions.AlreadyLoggedException;
 import in.foresthut.impact.config.Config;
 
 public class EarthDatabase {

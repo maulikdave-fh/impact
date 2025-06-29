@@ -12,6 +12,7 @@
 		"countries": [
 			"India"
 		],
+		"region" : "Western Ghats",
 		"areaHectares": 602000,
 		"keySpecies": [
 			"Panthera tigris",
@@ -42,6 +43,7 @@
 		"countries": [
 			"India"
 		],
+		"region" : "Western Ghats",
 		"areaHectares": 4816800,
 		"keySpecies": [
 			"Panthera tigris",
@@ -89,6 +91,7 @@
 		"countries": [
 			"India"
 		],
+		"region" : "Western Ghats",
 		"areaHectares": 3100000,
 		"keySpecies": [],
 		"geoJSON": "./geojsons/im2/254.geojson"
@@ -115,6 +118,7 @@
 		"countries": [
 			"India"
 		],
+		"region" : "Western Ghats",
 		"areaHectares": 2269000,
 		"keySpecies": [],
 		"geoJSON": "./geojsons/im2/271.geojson"

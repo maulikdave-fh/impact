@@ -1,0 +1,12 @@
+SENTIMENT ANALYSIS MODEL GENERATION
+-----------------------------------
+# Following commands have to be run at the root directory of this project
+
+# To generate binarized tree from custom labelled dataset for sentiment analysis
+mvn -q compile exec:java -Dexec.mainClass="edu.stanford.nlp.sentiment.BuildBinarizedDataset" -Dexec.args="-input data/sentiment/train_dataset.txt" > binarized_tree_train.txt
+
+# To generate sentiment model
+mvn compile exec:java -Dexec.mainClass="edu.stanford.nlp.sentiment.SentimentTraining" -Dexec.args="-numHid 25 -epochs 400 -trainPath binarized_tree_train.txt -train -model species_eni_model.ser.gz"
+
+# To move generated sentiment model files to model/sentiment folder under src/main/resources
+mv *.ser.gz src/main/resources/model/sentiment

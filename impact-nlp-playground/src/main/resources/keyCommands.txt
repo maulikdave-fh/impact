@@ -1,0 +1,12 @@
+CUSTOM NER
+----------
+
+
+SENTIMENT ANALYSIS
+------------------
+# To generate binarized tree from custom labelled dataset for sentiment analysis
+mvn -q compile exec:java -Dexec.mainClass="edu.stanford.nlp.sentiment.BuildBinarizedDataset" -Dexec.args="-input dataset.txt" > train.txt
+
+# To generate sentiment model
+mvn compile exec:java -Dexec.mainClass="edu.stanford.nlp.sentiment.SentimentTraining" -Dexec.args="-numHid 25 -epochs 400 -trainPath train.txt -train -model species_attributes_model.ser.gz"
+

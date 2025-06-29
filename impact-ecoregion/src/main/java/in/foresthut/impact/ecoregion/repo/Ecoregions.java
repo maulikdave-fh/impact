@@ -26,7 +26,7 @@ public class Ecoregions {
 		List<Ecoregion> ecoregions = new ArrayList<>();
 		var ecoregionCollection = earthDatabase.getCollection("ecoregion");
 		Bson includeProjection = Projections.include("id", "regionId", "name", "realm", "biome", "bioregion",
-				"keyStoneSpecies", "areaHectares");
+				"region", "keySpecies", "areaHectares");
 		for (Document ecoregion : ecoregionCollection.find().projection(includeProjection)) {
 			ecoregions.add(Ecoregion.from(ecoregion));
 		}

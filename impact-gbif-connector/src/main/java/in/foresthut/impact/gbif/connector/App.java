@@ -102,7 +102,7 @@ public class App {
 
 							} catch (InterruptedException | ExecutionException e) {
 								channel.basicNack(deliveryTag, false, true);
-								logger.error("Error while received the message from queue {}", TASK_QUEUE_NAME, e);
+								logger.error("Error while processing the message from queue {}", TASK_QUEUE_NAME, e);
 							}
 						} else {
 							logger.info("Duplicate message for hash {}", hash);
@@ -119,7 +119,7 @@ public class App {
 							channel.exchangeDeclare(EXCHNAGE_NAME, BuiltinExchangeType.FANOUT);
 							var message = new ObjectMapper().writeValueAsBytes(observation);
 							channel.basicPublish(EXCHNAGE_NAME, "", null, message);
-							// logger.info(" [x] Sent for GBIF observation id '{}'", observation.key());
+							//logger.info(" [x] Sent for GBIF observation id '{}'", observation.observation().key());
 						} catch (IOException e) {
 							logger.error("{}", e);
 							throw e;

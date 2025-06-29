@@ -1,6 +1,6 @@
 package in.foresthut.impact.utils;
 
-import in.foresthut.impact.commons.AlreadyLoggedException;
+import in.foresthut.impact.commons.exceptions.AlreadyLoggedException;
 
 class InvalidGeoJsonException extends AlreadyLoggedException {
 

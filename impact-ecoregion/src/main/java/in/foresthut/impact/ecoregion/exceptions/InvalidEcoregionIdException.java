@@ -1,6 +1,6 @@
 package in.foresthut.impact.ecoregion.exceptions;
 
-import in.foresthut.impact.commons.AlreadyLoggedException;
+import in.foresthut.impact.commons.exceptions.AlreadyLoggedException;
 
 public class InvalidEcoregionIdException extends AlreadyLoggedException {
 

@@ -1,0 +1,7 @@
+Western Ghats	BIOREGION
+North Western Ghats Moist Deciduous Forest	ECOREGION
+North Western Ghats Montane Rainforest	ECOREGION
+Psittacula	GENUS 
+columboides	SPECIES
+Malabar parakeet	SPECIES
+Blue-winged parakeet	SPECIES

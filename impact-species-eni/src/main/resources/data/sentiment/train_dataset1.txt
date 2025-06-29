@@ -1,0 +1,495 @@
+4 The Great Hornbill (Buceros bicornis) is native to the Western Ghats.
+
+2 Its distribution is fragmented across the Indian subcontinent and Southeast Asia.
+
+0 The Great Hornbill is not endemic to the Western Ghats.
+
+2 A species is considered endemic if it is exclusively native to a specific area.
+
+2 The Great Hornbill is found in other regions besides the Western Ghats, including the Himalayan foothills, other parts of India, Southeast Asia, and Sumatra.
+
+4 There is no evidence to suggest that Buceros bicornis is an invasive species in the Western Ghats.
+
+4 It's a native species and a natural part of the ecosystem.
+
+4 Yes, Uropeltis phipsonii is endemic to the Western Ghats.
+
+4 It is native to this region of India and is not considered an invasive species there.
+
+4 The Red-vented Bulbul ( Pycnonotus cafer) is native to the Indian subcontinent 
+
+0 But it is not specifically endemic to the Western Ghats.
+
+2 Endemic species are exclusively native to a particular area.
+
+4 While native to the general Indian region, Pycnonotus cafer is considered an invasive species in many other parts of the world.
+
+0 Delonix regia is not endemic or native to the Western Ghats.
+
+0 It is introduced to tropical and subtropical regions worldwide.
+
+4 While Delonix regia is considered an invasive species in some regions, particularly in disturbed areas, some sources indicate that it is not considered invasive in the Western Ghats.
+
+4 It is also listed as naturalized and non-invasive in some cultural landscapes in India.
+
+0 Some studies have documented Delonix regia as an invasive species in the Anaikatty hills, which are part of the Southern Western Ghats.
+
+0 The Common Myna (Acridotheres tristis) is not endemic to the Western Ghats.
+
+4 It is native to Asia.
+
+0 While the Common Myna is very common and widespread in the Western Ghats, it is also considered an invasive species globally.
+
+4 Hoplobatrachus tigerinus is native to the Western Ghats.
+
+2 The Indian bullfrog (Hoplobatrachus tigerinus) is found in the Western Ghats.
+
+0 Hoplobatrachus tigerinus is not endemic to the Western Ghats.
+
+2 Endemic species are exclusively native to a specific region.
+
+4 While native to the Indian subcontinent, Hoplobatrachus tigerinus is an invasive species in other regions, such as Madagascar and the Andaman Islands.
+
+2 In these locations, it poses a threat to native amphibian populations and local ecosystems.
+
+0 Lantana camara is not endemic to the Western Ghats.
+
+0 Lantana camara is not native to the Western Ghats.
+
+2 It was introduced to India as an ornamental plant.
+
+0 Lantana camara is considered an invasive species in the Western Ghats.
+
+0 It has spread rapidly and is now a major threat to biodiversity in the region, invading tiger habitats and other natural ecosystems.
+
+0 Acacia auriculiformis is not endemic or native to the Western Ghats.
+
+0 Acacia auriculiformis is considered an invasive species in the Western Ghats.
+
+0 It has been reported to be invading the Western Ghats, replacing native trees.
+
+2 Forest managers in the Western Ghats have planted Acacia auriculiformis, along with other exotic species like eucalyptus and silver oak.
+
+0 Ipomoea carnea is not endemic to the Western Ghats.
+
+2 Ipomoea carnea is found in the Western Ghats.
+
+0 While not native, it is distributed in damp places including the Western Ghats region.
+
+0 Ipomoea carnea is considered an invasive species in some areas of India, including regions relevant to the Western Ghats.
+
+0 It's been recorded as an invasive species in places like the Sarguja district of Chhattisgarh, which has some ecological similarities to the Western Ghats, and Hassan District, Karnataka, which is part of the Western Ghats.
+
+0 Oreochromis niloticus is not endemic to the Western Ghats.
+
+0 Oreochromis niloticus is not native to the Western Ghats.
+
+0 Oreochromis niloticus is considered an invasive species in the Western Ghats.
+
+2 Studies have recorded its presence and distribution in the aquatic ecosystems of the southern Western Ghats.
+
+0 It is listed as a major invasive threat to fish diversity in the region.
+
+0 Paracoccus marginatus, commonly known as the papaya mealybug, is not endemic or native to the Western Ghats.
+
+0 It is considered an invasive species in India.
+
+2 It has spread to various regions, including the Caribbean Islands, parts of Southeast Asia (including India, Indonesia, and Thailand), and parts of the United States.
+
+0 The introduction of Paracoccus marginatus has caused damage to papaya cultivation in South India, particularly in Karnataka, Kerala, and Tamil Nadu.
+
+0 It has also invaded Assam.
+
+2 While not specifically stated as only being in the Western Ghats, a study mentions that 39 species were endemic to the Western Ghats but does not include Paracoccus marginatus.
+
+0 Another study indicates that Paracoccus marginatus along with Phenacoccus solenopsis are causing yield losses to Gymnema sylvestre in India.
+
+4 Yes, Leptocoma minima, also known as the Crimson-backed Sunbird, is endemic to the Western Ghats of India.
+
+2 This means it is native to that region and found nowhere else in the world.
+
+4 It is not considered an invasive species.
+
+4 Yes, Macaca silenus, also known as the lion-tailed macaque or wanderoo, is endemic and native to the Western Ghats of South India.
+
+4 The lion-tailed macaque is not considered an invasive species.
+
+4 Yes, _Ramanella mormorata_ is endemic to the Western Ghats of India.
+
+4 It is not considered invasive.
+
+4 The Brahminy Kite is native to the Indian subcontinent, including the Western Ghats.
+
+2 It is a familiar sight in the skies of India.
+
+0 The Brahminy Kite is not endemic to the Western Ghats.
+
+2 Endemic means it is exclusively found in that region, which isn't the case for this kite.
+
+2 It is widespread across the Indian subcontinent, Southeast Asia, and Australia.
+
+4 The Brahminy Kite is not considered an invasive species in the Western Ghats.
+
+4 It is a naturally occurring species in the region.
+
+4 The Russell's Viper (Daboia russelii) is native to the Indian subcontinent, including areas within the Western Ghats.
+
+0 Daboia russelii is not endemic to the Western Ghats.
+
+2 It has a widespread distribution throughout the Indian subcontinent and parts of Southeast Asia.
+
+4 There is no information suggesting that Daboia russelii is an invasive species in the Western Ghats.
+
+4 It is a native species in the region.
+
+4 The Great Hornbill (Buceros bicornis) is native to the Western Ghats, as well as other parts of India, mainland Southeast Asia, and Sumatra.
+
+0 It is not endemic to the Western Ghats, as it is found in other regions as well.
+
+4 The species is also not considered invasive in the Western Ghats; it is a native species that plays an important role in the ecosystem.
+
+4 Yes, Uropeltis phipsonii, also known as Phipson's shieldtail, is endemic to the Western Ghats of India.
+
+2 This means it is native to that region and found nowhere else in the world.
+
+2 It is a non-venomous, burrowing snake.
+
+4 Pycnonotus cafer is native to the Indian subcontinent, including areas near the Western Ghats.
+
+0 But it is not specifically endemic to the Western Ghats.
+
+4 The Grey-headed Bulbul (Brachypodius priocephalus) is endemic to the Western Ghats.
+
+0 Pycnonotus cafer is considered one of the world's 100 worst invasive alien species.
+
+2 Pycnonotus cafer has been reported in the Nelliampathy and Anamalai hills of the southern Western Ghats.
+
+0 It is not endemic or native to the Western Ghats.
+
+0 While native to Madagascar, Delonix regia has been widely introduced to tropical and subtropical regions around the world, including India.
+
+4 In general, Delonix regia is not considered a major invasive species in India.
+
+4 One source mentions it is planted vigorously as an ornamental tree in India but has not become invasive.
+
+0 However, some studies suggest it can be invasive in certain contexts.
+
+0 One study documented Delonix regia in the Anaikatty hills, which are part of the Western Ghats, as part of a survey of invasive alien plant species.
+
+0 In conclusion, Delonix regia is not native to the Western Ghats.
+
+2 While it's widely planted, its invasiveness in that specific region appears to be a subject of ongoing observation.
+
+4 Acridotheres tristis, also known as the common myna or Indian myna, is native to Asia.
+
+0 While not endemic to the Western Ghats, it is found there.
+
+0 It is also considered an invasive species.
+
+0 Acridotheres tristis is not endemic to the Western Ghats.
+
+4 It is native to Asia.
+
+4 Acridotheres tristis is native to Asia, including parts of India, and can be found in the Western Ghats.
+
+0 Acridotheres tristis is considered one of the world's most invasive species by the IUCN.
+
+4 Hoplobatrachus tigerinus is native to the Western Ghats.
+
+2 It is found in the Western Ghats, as well as other regions of India, and South and Southeast Asia.
+
+0 Hoplobatrachus tigerinus is not endemic to the Western Ghats, meaning it is naturally found in other geographic locations as well.
+
+4 While it can be an invasive species in other locations like the Andaman Islands and Madagascar, it is considered native to the Western Ghats.
+
+0 Lantana camara is not native to the Western Ghats.
+
+0 It is native to tropical America.
+
+0 It was introduced to India as an ornamental plant.
+
+0 It is now a widespread invasive species in the Western Ghats.
+
+2 Studies indicate its presence is prominent in the southern Western Ghats.
+
+0 It can become the dominant understory species, suppressing native forest regeneration and reducing biodiversity.
+
+0 It competes with native plants for resources.
+
+2 It can alter nutrient cycles in the soil.
+
+0 It has been found to invade a large percentage of India's tiger habitats, including those in the Western Ghats, which can deplete the prey base for tigers.
+
+2 The plant's leaves are inedible to many herbivores and can cause health problems if consumed.
+
+2 It can change fire patterns in a forest ecosystem.
+
+0 Acacia auriculiformis is not endemic or native to the Western Ghats.
+
+0 It is native to Maluku, New Guinea, the Northern Territory and Queensland, Australia.
+
+0 Acacia auriculiformis is considered an exotic species in the Western Ghats.
+
+2 It has been extensively planted on degraded lands in the southern Western Ghats for several decades.
+
+0 Acacia auriculiformis can be invasive.
+
+0 It is listed as a Category I invasive species by the Florida Invasive Species Council and invades pinelands, hammocks, and scrub habitats.
+
+0 It can also shade out rare plants and displace native flora.
+
+0 Ipomoea carnea is not native or endemic to the Western Ghats.
+
+0 It is native to South America.
+
+0 It was introduced to India.
+
+0 Ipomoea carnea is considered an invasive species in many parts of India, including regions relevant to the Western Ghats.
+
+0 It is listed as an invasive species in a study conducted in the Hassan district of Karnataka, which is part of the Western Ghats.
+
+0 It is also listed among the invasive species of Sarguja district of Chattisgarh.
+
+0 The plant's aggressive colonizing ability allows it to thrive in diverse habitats, posing a threat to native species and ecosystems.
+
+2 In India, Ipomoea carnea is commonly found in damp places, marshy lands, along riverbeds, canals, and other waterlogged areas.
+
+0 Oreochromis niloticus (Nile Tilapia) is not endemic to the Western Ghats.
+
+0 It is native to Africa and the Middle East.
+
+0 Oreochromis niloticus is not native to the Western Ghats.
+
+0 Oreochromis niloticus is considered an invasive species in the Western Ghats.
+
+0 Studies have shown its presence and distribution in the rivers and streams of the Western Ghats, where it is regarded as a potential pest that can disrupt the population structure of native freshwater fish species.
+
+0 Paracoccus marginatus, also known as the papaya mealybug, is not endemic or native to the Western Ghats.
+
+0 It is considered an invasive species there.
+
+0 Paracoccus marginatus is native to Mexico and Central America.
+
+0 It has spread to many regions worldwide, including India, where it is recognized as an invasive pest.
+
+0 It is listed as one of the commonly found alien species in India.
+
+4 Yes, Leptocoma minima, also known as the Crimson-backed Sunbird or Small Sunbird, is endemic to the Western Ghats of India.
+
+2 This means it is native to and found exclusively in that region.
+
+4 It is not considered an invasive species.
+
+4 Yes, Macaca silenus, also known as the lion-tailed macaque or wanderoo, is endemic to the Western Ghats of South India.
+
+2 This means it is native to that region and found nowhere else in the world.
+
+4 They are not considered an invasive species; they are a natural part of the Western Ghats ecosystem.
+
+4 Yes, Ramanella mormorata, now known as Uperodon mormoratus, is endemic to the Western Ghats of southwestern India.
+
+4 It is native to this region and not considered an invasive species there.
+
+0 The Brahminy Kite (Haliastur indus) is not endemic to the Western Ghats.
+
+4 It is a widespread species found in India, including the Western Ghats, but also in other parts of the country and beyond.
+
+4 It is native to the Indian Subcontinent.
+
+4 It is not considered invasive.
+
+0 No, Daboia russelii is not endemic to the Western Ghats.
+
+2 Endemic means that it is exclusively native to that region.
+
+4 Daboia russelii is native to the Western Ghats, as well as other regions of India and South Asia.
+
+4 Daboia russelii is not considered invasive to the Western Ghats since it is a native species.
+
+0 Columba livia is not endemic to the Western Ghats.
+
+4 The Nilgiri Wood-Pigeon (Columba elphinstonii) is a pigeon species endemic to the Western Ghats.
+
+2 Columba livia is present in the Western Ghats.
+
+2 Specifically, the Rock Dove (Columba livia) has been recorded in the Western Ghats.
+
+0 Columba livia is considered an invasive species globally.
+
+2 Feral populations, originating from escaped domestic pigeons, have naturalized in many areas.
+
+4 The Great Hornbill (Buceros bicornis) is native to the Western Ghats, as well as other parts of India, Southeast Asia, and Sumatra.
+
+0 It is not endemic to the Western Ghats, as it is found in other regions as well.
+
+4 Additionally, it is not considered an invasive species.
+
+4 Yes, Uropeltis phipsonii is endemic to the Western Ghats of India.
+
+2 This means it is native to and found exclusively in that region.
+
+4 Uropeltis phipsonii is not considered an invasive species.
+
+4 The Red-vented Bulbul is native to the Indian subcontinent, including India, Sri Lanka, Bangladesh, Burma, Nepal and parts of Bhutan.
+
+2 The Red-vented Bulbul is found in the Western Ghats.
+
+2 While native to the Indian subcontinent, the Red-vented Bulbul is considered an invasive species in other parts of the world.
+
+0 It is included in the list of the world's 100 worst invasive alien species.
+
+0 It can outcompete native birds in tropical biodiversity hotspots.
+
+4 The Great Hornbill (Buceros bicornis) is native to the Western Ghats, as well as other parts of the Indian subcontinent and Southeast Asia.
+
+0 It is not endemic to the Western Ghats, meaning it is found in other regions as well.
+
+4 It is also not considered invasive.
+
+4 Yes, Uropeltis phipsonii, also known as Phipson's shieldtail, is endemic to the Western Ghats of India.
+
+2 This means it is native to that region and found nowhere else in the world.
+
+4 It is not considered invasive.
+
+4 The Red-vented Bulbul is native to the Indian subcontinent, including India.
+
+2 It has been reported in the Nelliampathy and Anamalai hills of the southern Western Ghats.
+
+0 The Red-vented Bulbul is not endemic to the Western Ghats.
+
+0 Several other bulbul species are endemic to the Western Ghats, but Pycnonotus cafer is not among them.
+
+0 The Red-vented Bulbul is considered one of the world's 100 worst invasive alien species.
+
+2 While present in the Western Ghats, its invasiveness is more noted in other parts of the world where it has been introduced.
+
+0 Delonix regia, also known as the Royal Poinciana or Gulmohar, is not endemic or native to the Western Ghats.
+
+0 It is native to Madagascar.
+
+0 While it's not native, Delonix regia is found in India, including areas near the Western Ghats, as it's widely planted as an ornamental tree.
+
+2 Regarding whether it's invasive, one source indicates that in Hassan district, Karnataka (which begins at the base of the Western Ghats), a study revealed that over 18% of the flora comprises alien species.
+
+2 The study suggests the naturalization of alien species can be unsafe for native and endemic flora.
+
+4 However, another source explicitly states that Delonix regia is planted vigorously as an ornamental tree in India but has not become invasive.
+
+4 Acridotheres tristis, commonly known as the common myna or Indian myna, is native to Asia.
+
+0 While they are found in the Western Ghats, they are not endemic to the region.
+
+2 Instead, they are considered to be highly distributed there.
+
+0 The International Union for Conservation of Nature (IUCN) has declared the common myna as one of the world's most invasive species.
+
+2 They have been introduced to various parts of the world, including Australia, where they are considered pests.
+
+4 Hoplobatrachus tigerinus is native to the Indian subcontinent, and its range includes the Western Ghats.
+
+0 Hoplobatrachus tigerinus is not endemic to the Western Ghats.
+
+0 A large percentage of amphibian species in the Western Ghats are endemic, but Hoplobatrachus tigerinus is not among them.
+
+4 While native to India, Hoplobatrachus tigerinus has become an invasive species in other parts of the world, such as the Andaman Islands and Madagascar.
+
+0 In these locations, it poses a threat to native amphibian populations and other wildlife.
+
+0 It was introduced for pest control in rice fields but has since become a major threat to local amphibians.
+
+0 Lantana camara is not endemic or native to the Western Ghats.
+
+0 It is native to tropical America and was introduced to India as an ornamental plant.
+
+0 Now, it is considered one of the world's worst invasive species.
+
+0 Studies show that the southern Western Ghats are among the areas worst hit by Lantana camara invasion in India.
+
+0 Acacia auriculiformis is not endemic to the Western Ghats.
+
+0 It is native to Australia, the Philippines, Indonesia, and Papua New Guinea.
+
+0 Acacia auriculiformis is not native to the Western Ghats.
+
+0 Acacia auriculiformis is considered an invasive species in the Western Ghats.
+
+0 It has been observed to replace native trees, alter soil characteristics, and negatively impact local biodiversity.
+
+0 Ipomoea carnea is not endemic to the Western Ghats.
+
+0 It is native to Tropical America and was accidentally introduced to India in the early 20th century.
+
+0 It is now considered an invasive species in many parts of India, including the Western Ghats, where it aggressively colonizes marshy lands, water bodies, and other disturbed areas.
+
+0 Oreochromis niloticus is not endemic or native to the Western Ghats.
+
+0 Oreochromis niloticus is considered an invasive species in the Western Ghats.
+
+0 It has been introduced and has established populations there.
+
+0 Paracoccus marginatus, also known as the papaya mealybug, is not endemic or native to the Western Ghats.
+
+0 Instead, it is considered an invasive species in India, including the Western Ghats.
+
+0 It has spread to many regions worldwide, including India, where it is recognized as an invasive pest.
+
+0 It was first reported in India in 200 As an invasive species, Paracoccus marginatus can cause significant damage to various crops and plants.
+
+4 Yes, Leptocoma minima, also known as the Crimson-backed Sunbird, is endemic to the Western Ghats of India.
+
+4 This means it is native to and exclusively found in this region.
+
+4 It is not considered an invasive species.
+
+4 Yes, Macaca silenus, also known as the lion-tailed macaque or wanderoo, is endemic and native to the Western Ghats of South India.
+
+2 This means it is found nowhere else in the world naturally.
+
+4 It is not invasive to the Western Ghats; as an endemic species, it naturally belongs there.
+
+4 Yes, Ramanella mormorata, now known as Uperodon mormoratus, is endemic to the Western Ghats of southwestern India.
+
+4 It is native to this region and is not considered an invasive species there.
+
+2 It has been confirmed in the Western Ghats states of Karnataka, Maharashtra, Goa, and Gujarat.
+
+4 Haliastur indus (Brahminy Kite) is native to the Western Ghats.
+
+0 Haliastur indus is not endemic to the Western Ghats.
+
+2 Endemic means that it is exclusively native to a specific area.
+
+2 While it is found in the Western Ghats, its distribution is much wider.
+
+4 There is no evidence to suggest that Haliastur indus is invasive in the Western Ghats.
+
+2 In fact, there's some indication that generalist species like the Brahminy Kite are moving to higher altitudes within the Western Ghats due to increasing temperatures, potentially competing with habitat specialists.
+
+4 Daboia russelii is native to South Asia, including India.
+
+0 While it is found in many parts of India, including along the West Coast and its hills, it is not endemic to the Western Ghats.
+
+2 Endemic means that it is exclusively native to a specific area.
+
+2 Daboia russelii has a broader distribution than just the Western Ghats.
+
+4 It's also not considered an invasive species there; it's part of the natural ecosystem.
+
+0 Columba livia is not endemic to the Western Ghats.
+
+2 Endemic means that it is native and exclusively found in that region.
+
+4 Columba livia is native to the Indian Subcontinent.
+
+2 However, it's important to distinguish between the wild Rock Dove and the feral or domesticated forms, which are widespread.
+
+0 Columba livia can be considered invasive in the sense that feral populations exist in areas far beyond their original native range.
+
+2 Feral pigeons originated from escaped domestic pigeons.
+
+2 They are now cosmopolitan.
+
+2 Feral Columba livia are common in urban settings throughout India.
+
+4 The Nilgiri Wood-Pigeon (Columba elphinstonii) is endemic to the Western Ghats.

@@ -17,9 +17,18 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<org.slf4j.version>2.0.17</org.slf4j.version>
 		<logback.version>1.5.18</logback.version>
+		<com.fasterxml.jackson.version>2.18.3</com.fasterxml.jackson.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson.version}</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -30,6 +39,13 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>${logback.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.12.1</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>

@@ -22,7 +22,7 @@ import in.foresthut.impact.utils.Polygon;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record Ecoregion(String id, int regionId, String name, String realm, String biome, String bioregion,
-		int areaHectares, List<String> keyStoneSpecies) {
+		String region, int areaHectares, List<String> keySpecies) {
 
 	private static MongoDatabase earthDatabase = EarthDatabase.getInstance();
 	private static final Logger logger = LoggerFactory.getLogger(Ecoregion.class);
@@ -82,8 +82,8 @@ public record Ecoregion(String id, int regionId, String name, String realm, Stri
 	static Ecoregion from(Document ecoregion) {
 		Ecoregion region = new Ecoregion(ecoregion.getObjectId("_id").toString(), ecoregion.getInteger("regionId"),
 				ecoregion.getString("name"), ecoregion.getString("realm"), ecoregion.getString("biome"),
-				ecoregion.getString("bioregion"), ecoregion.getInteger("areaHectares"),
-				ecoregion.getList("keyStoneSpecies", String.class));
+				ecoregion.getString("bioregion"), ecoregion.getString("region"),ecoregion.getInteger("areaHectares"),
+				ecoregion.getList("keySpecies", String.class));
 		return region;
 	}
 }

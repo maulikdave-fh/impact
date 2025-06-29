@@ -80,11 +80,7 @@
 			<version>5.12.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>in.foresthut.impact</groupId>
-			<artifactId>impact-config</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+	
 	</dependencies>
 
 	<build>

@@ -48,8 +48,6 @@ public class GBIFClient {
 		objectMapper = new ObjectMapper();
 	}
 
-	// TODO - send a page retrieval request in separate threads once number of pages
-	// are known
 	public List<Observation> observations(Task task) throws IOException, InterruptedException, ExecutionException {
 		List<Observation> observations = new ArrayList<>();
 		int offset = 0;
@@ -63,7 +61,7 @@ public class GBIFClient {
 			HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 			if (response.statusCode() == 200) {
 				GBIFResponse gbifResponse = objectMapper.readValue(response.body(), GBIFResponse.class);
-				logger.info("Total {} observations to be fetched.", gbifResponse.count());
+				logger.info("Total {} observations to be fetched for polygon {}.", gbifResponse.count(), task.polygon());
 				observations.addAll(gbifResponse.results());
 				logger.info("Received {} observations for page number {}", gbifResponse.results().size(),
 						(offset + LIMIT) / LIMIT);
