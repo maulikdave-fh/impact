@@ -44,13 +44,14 @@ public class TaskPublisher implements Runnable {
 		// 2. Loop throuh the records
 		for (var dbTask : dbTasks) {
 			String ecoregionId = dbTask.getString("ecoregionId");
+			String regionName = dbTask.getString("regionName");
 			String polygon = dbTask.getString("polygon");
 			String dateFrom = dbTask.getString("dateFrom");
 			// 2a. Calculate hash
 			int hash = hash(ecoregionId, polygon, dateFrom);
 			// 2b. Set a task with dateTo = yesterday's date
 			String dateTo = LocalDate.now().minusDays(1).toString();
-			Task task = new Task(ecoregionId, polygon, dateFrom, dateTo, hash);
+			Task task = new Task(ecoregionId, regionName, polygon, dateFrom, dateTo, hash);
 			// 2c. Publish task to queue
 			try {
 				publish(task);
@@ -90,6 +91,6 @@ public class TaskPublisher implements Runnable {
 		return new StringBuilder(ecoreigonId).append(polygon).append(dateFrom).hashCode();
 	}
 
-	private static record Task(String ecoregionId, String polygon, String dateFrom, String dateTo, int messageHash) {
+	private static record Task(String ecoregionId, String regionName, String polygon, String dateFrom, String dateTo, int messageHash) {
 	}
 }

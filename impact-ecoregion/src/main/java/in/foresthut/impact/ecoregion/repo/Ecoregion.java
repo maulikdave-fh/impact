@@ -17,12 +17,11 @@ import com.mongodb.client.model.Projections;
 
 import in.foresthut.impact.ecoregion.exceptions.InvalidEcoregionIdException;
 import in.foresthut.impact.ecoregion.infra.Cache;
-import in.foresthut.impact.ecoregion.infra.EarthDatabase;
-import in.foresthut.impact.utils.Polygon;
+import in.foresthut.impact.utils.geometry.Polygon;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record Ecoregion(String id, int regionId, String name, String realm, String biome, String bioregion,
-		String region, int areaHectares, List<String> keySpecies) {
+		String region, int areaHectares) {
 
 	private static MongoDatabase earthDatabase = EarthDatabase.getInstance();
 	private static final Logger logger = LoggerFactory.getLogger(Ecoregion.class);
@@ -82,8 +81,7 @@ public record Ecoregion(String id, int regionId, String name, String realm, Stri
 	static Ecoregion from(Document ecoregion) {
 		Ecoregion region = new Ecoregion(ecoregion.getObjectId("_id").toString(), ecoregion.getInteger("regionId"),
 				ecoregion.getString("name"), ecoregion.getString("realm"), ecoregion.getString("biome"),
-				ecoregion.getString("bioregion"), ecoregion.getString("region"),ecoregion.getInteger("areaHectares"),
-				ecoregion.getList("keySpecies", String.class));
+				ecoregion.getString("bioregion"), ecoregion.getString("region"),ecoregion.getInteger("areaHectares"));
 		return region;
 	}
 }

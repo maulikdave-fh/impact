@@ -8,6 +8,8 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import in.foresthut.impact.commons.exceptions.AlreadyLoggedException;
+
 /**
  * Singleton that loads properties from config.properties.
  * 
@@ -56,6 +58,11 @@ public class Config {
 	 * @return property value as String
 	 */
 	public String get(String key) {
-		return properties.getProperty(key);
+		var value = properties.getProperty(key);
+		if (value == null) {
+			logger.error("Property with key {} not found. Check your config.properties", key);
+			throw new AlreadyLoggedException("Property with key " + key + " not found.", null, null);
+		}
+		return value;
 	}
 }

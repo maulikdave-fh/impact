@@ -20,49 +20,52 @@ import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.model.Updates;
 import com.mongodb.client.result.UpdateResult;
 
-import in.foresthut.impact.csis.schedular.ecoregion.EcoregionClient;
 import in.foresthut.impact.csis.schedular.infra.CSISTasksDBConfiguration;
+import in.foresthut.impact.csis.schedular.infra.EcoregionClient;
+import in.foresthut.impact.csis.schedular.infra.EcoregionClient.Ecoregion;
+import in.foresthut.impact.csis.schedular.infra.OccurrenceClient;
 
 public class TaskAssigner implements Runnable {
 	private static final Logger logger = LoggerFactory.getLogger(TaskAssigner.class);
 	private static MongoDatabase csisTaskDatabase = CSISTasksDBConfiguration.getInstance();
 	private MongoCollection<Document> taskCollection;
 	private EcoregionClient ecoregionClient;
-
-	private static final String PRIMARY_START_DATE = "1500-01-01";
+	private OccurrenceClient occurrenceClient;
 
 	public TaskAssigner() {
 		taskCollection = csisTaskDatabase.getCollection("tasks");
 		ecoregionClient = new EcoregionClient();
+		occurrenceClient = OccurrenceClient.getInstance();
 	}
 
 	@Override
 	public void run() {
-		List<String> ecoregions = new ArrayList<>();
+		List<Ecoregion> ecoregions = new ArrayList<>();
 		try {
 			ecoregions = ecoregionClient.ecoregions();
 		} catch (IOException | InterruptedException e) {
 			logger.error("Error while fetching ecoregions' details", e);
 		}
 
-		for (var ecoregionId : ecoregions) {
-			long count = taskCollection.countDocuments(new BsonDocument("ecoregionId", new BsonString(ecoregionId)));
+		for (var ecoregion : ecoregions) {
+			long count = taskCollection.countDocuments(new BsonDocument("ecoregionId", new BsonString(ecoregion.id())));
 			// if tasks don't exist for a given ecoregion
 			if (count == 0) {
 				try {
-					List<String> splits = ecoregionClient.split(ecoregionId);
+					List<String> splits = ecoregionClient.split(ecoregion.id());
 					List<Document> dbTasks = new ArrayList<>();
 					for (var split : splits) {
-						dbTasks.add(new Document("ecoregionId", ecoregionId).append("polygon", split)
-								.append("dateFrom", PRIMARY_START_DATE).append("outbox", true));
+						String startDate = occurrenceClient.latestModifiedOn(ecoregion.region(), ecoregion.id());
+						dbTasks.add(new Document("ecoregionId", ecoregion.id()).append("regionName", ecoregion.region())
+								.append("polygon", split).append("dateFrom", startDate).append("outbox", true));
 					}
 					taskCollection.insertMany(dbTasks);
-					logger.info("{} tasks created for ecoregionId {}", dbTasks.size(), ecoregionId);
+					logger.info("{} tasks created for ecoregionId {}", dbTasks.size(), ecoregion.id());
 				} catch (IOException | InterruptedException | ExecutionException e) {
 					logger.error("{}", e);
 				}
 			} else {
-				Bson ecoregionIdFilter = Filters.eq("ecoregionId", ecoregionId);
+				Bson ecoregionIdFilter = Filters.eq("ecoregionId", ecoregion.id());
 				Bson outboxTaskFilter = Filters.eq("outbox", false);
 				Bson combinedFilter = Filters.and(ecoregionIdFilter, outboxTaskFilter);
 
@@ -74,7 +77,7 @@ public class TaskAssigner implements Runnable {
 				Bson combinedUpdates = Updates.combine(dateFromUpdate, outboxUpdate);
 
 				UpdateResult updateResult = taskCollection.updateMany(combinedFilter, combinedUpdates, updateOptions);
-				logger.info("Tasks updated for ecoregionId {} - {}", ecoregionId, updateResult);
+				logger.info("Tasks updated for ecoregionId {} - {}", ecoregion.id(), updateResult);
 			}
 		}
 	}
