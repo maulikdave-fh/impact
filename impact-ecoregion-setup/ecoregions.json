@@ -1,22 +1,5 @@
 [
 	{
-		"regionId": 242,
-		"name": "Malabar Coast Moist Forests",
-		"primaryHabitat": {
-			"id": 1.6,
-			"name": "Subtropical/Tropical Moist Lowland Forest"
-		},
-		"realm": "Indomalayan",
-		"biome": "Tropical & Subtropical Moist Broadleaf Forests",
-		"bioregion": "Indian Tropical Coastal Forests (IM2)",
-		"countries": [
-			"India"
-		],
-		"region": "Western Ghats",
-		"areaHectares": 3532446,
-		"geoJSON": "./geojsons/im2/242.geojson"
-	},
-	{
 		"regionId": 253,
 		"name": "North Western Ghats Moist Deciduous Forests",
 		"primaryHabitat": {
